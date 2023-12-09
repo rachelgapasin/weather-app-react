@@ -1,0 +1,82 @@
+:root {
+  /* light mode */
+  --primary-color-light: #74c5e9;
+  --main-bg-light: url("/public/images/clouds.jpg");
+  --section-bg-light: #ffffffaf;
+  --text-light: #000;
+  --btn-bg-light: #cae8f7;
+
+  /* dark mode */
+  --primary-color-dark: #74c5e9;
+  --main-bg-dark: #151518;
+  --section-bg-dark: #ffffff21;
+  --text-dark: #fff;
+  --btn-bg-dark: transparent;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-color: var(var(--primary-color-light));
+    --main-bg: var(--main-bg-light);
+    --section-bg: var(--section-bg-light);
+    --text: var(--text-light);
+    --btn-bg: var(--btn-bg-light);
+    color-scheme: light;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: var(--primary-color-dark);
+    --main-bg: var(--main-bg-dark);
+    --section-bg: var(--section-bg-dark);
+    --text: var(--text-dark);
+    --btn-bg: var(--btn-bg-dark);
+    color-scheme: dark;
+  }
+}
+
+[color-scheme="light"] {
+  --primary-color: var(--primary-color-light);
+  --main-bg: var(--main-bg-light);
+  --section-bg: var(--section-bg-light);
+  --text: var(--text-light);
+  --btn-bg: var(--btn-bg-light);
+  color-scheme: light;
+}
+
+[color-scheme="dark"] {
+  --primary-color: var(var(--primary-color-dark));
+  --main-bg: var(--main-bg-dark);
+  --section-bg: var(--section-bg-dark);
+  --text: var(--text-dark);
+  --btn-bg: var(--btn-bg-dark);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--main-bg);
+  background-size: cover;
+  color: var(--text);
+  padding: 20px;
+}
+
+.App {
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+section {
+  background: var(--section-bg);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 30px;
+  margin: 10px auto;
+  width: 100%;
+}
+
+section.secondary {
+  padding: 10px;
+}
