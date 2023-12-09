@@ -49,7 +49,10 @@ function TopButtons() {
       </button>
       <div className={`city-list ${isVisible} sm:flex`}>
         {cities.map((city) => (
-          <button key={city.id} className="transition ease-out hover:scale-110">
+          <button
+            key={city.id}
+            className="transition ease-out sm:hover:scale-110"
+          >
             {city.title}
           </button>
         ))}

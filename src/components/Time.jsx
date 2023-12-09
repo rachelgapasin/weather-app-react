@@ -1,12 +1,11 @@
 import React from "react";
+import { formatToLocalTime } from "../services/weatherService";
 
-function Time() {
+function Time({ weather: { dt, timezone } }) {
   return (
     <div>
       <div className="flex items-center justify-center my-6">
-        <p className="sm:text-xl">
-          Tuesday, 31 May 2023 | Local time: 12:46 PM
-        </p>
+        <p className="sm:text-xl">{formatToLocalTime(dt, timezone)}</p>
       </div>
     </div>
   );

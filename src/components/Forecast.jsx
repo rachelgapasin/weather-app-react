@@ -1,6 +1,7 @@
 import React from "react";
+import { iconUrlFromCode } from "../services/weatherService";
 
-function Forecast({ title }) {
+function Forecast({ title, items }) {
   return (
     <section>
       <div className="flex items-center justify-start">
@@ -9,55 +10,17 @@ function Forecast({ title }) {
       <hr className="my-2" />
 
       <div className="flex flow-row items-center justify-between ">
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">04:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/02d@2x.png"
-            alt="Cloudy"
-            className="w-12 my-1"
-          />
-          <p className="font-medium">22°</p>
-        </div>
-
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">04:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/02d@2x.png"
-            alt="Cloudy"
-            className="w-12 my-1"
-          />
-          <p className="font-medium">22°</p>
-        </div>
-
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">04:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/02d@2x.png"
-            alt="Cloudy"
-            className="w-12 my-1"
-          />
-          <p className="font-medium">22°</p>
-        </div>
-
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">04:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/02d@2x.png"
-            alt="Cloudy"
-            className="w-12 my-1"
-          />
-          <p className="font-medium">22°</p>
-        </div>
-
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">04:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/02d@2x.png"
-            alt="Cloudy"
-            className="w-12 my-1"
-          />
-          <p className="font-medium">22°</p>
-        </div>
+        {items.map((item) => (
+          <div className="flex flex-col items-center justify-center">
+            <p className="font-light text-sm">{item.title}</p>
+            <img
+              src={iconUrlFromCode(item.icon)}
+              alt={item.details}
+              className="w-12 my-1"
+            />
+            <p className="font-medium">{`${item.temp.toFixed()}°`}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
