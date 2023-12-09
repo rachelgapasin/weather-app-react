@@ -10,7 +10,7 @@ import {
 function TemperatureAndDetails() {
   return (
     <section>
-      <div className="flex flex-row items-center justify-around py-3">
+      <div className="sm:flex flex-row items-center justify-around py-3">
         <div className="flex flex-col items-center space-y-2">
           <img
             src="http://openweathermap.org/img/wn/02d@2x.png"
@@ -26,7 +26,7 @@ function TemperatureAndDetails() {
         </div>
 
         <div className="flex flex-col space-y-2">
-          <p className="text-5xl mb-3">34°</p>
+          <p className="text-5xl m-3">34°</p>
           <div className="flex font-light text-sm items-center justify-center">
             <UilTemperature size={18} className="mr-1" />
             Feels like:
@@ -48,28 +48,33 @@ function TemperatureAndDetails() {
       </div>
 
       <div className="flex flow-row items-center justify-center space-x-2 text-sm py-3">
-        <UilSun />
-        <p className="font-light">
-          Rise: <span className="font-medium ml-1">06:45 AM</span>
-        </p>
-        <p className="font-light">|</p>
+        <div className="sm:flex items-center border-gray-500 border-r-2 pr-2">
+          <UilSun className="m-auto" />
+          <p className="font-light mx-1">
+            Rise: <span className="font-medium">06:45 AM</span>
+          </p>
+        </div>
 
-        <UilSunset />
-        <p className="font-light">
-          Set: <span className="font-medium ml-1">07:35 PM</span>
-        </p>
-        <p className="font-light">|</p>
+        <div className="sm:flex items-center border-gray-500 border-r-2 pr-2">
+          <UilSunset className="m-auto" />
+          <p className="font-light mx-1">
+            Set: <span className="font-medium ml-1">07:35 PM</span>
+          </p>
+        </div>
 
-        <UilSun />
-        <p className="font-light">
-          High: <span className="font-medium ml-1">45°</span>
-        </p>
-        <p className="font-light">|</p>
+        <div className="sm:flex items-center border-gray-500 border-r-2 pr-2">
+          <UilSun className="m-auto" />
+          <p className="font-light mx-1">
+            High: <span className="font-medium ml-1">45°</span>
+          </p>
+        </div>
 
-        <UilSun />
-        <p className="font-light">
-          Low: <span className="font-medium ml-1">40°</span>
-        </p>
+        <div className="sm:flex items-center">
+          <UilSun className="m-auto" />
+          <p className="font-light mx-1">
+            Low: <span className="font-medium ml-1">40°</span>
+          </p>
+        </div>
       </div>
     </section>
   );

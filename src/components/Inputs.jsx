@@ -11,7 +11,7 @@ function Inputs() {
         <input
           type="text"
           placeholder="Search for city..."
-          className="text-xl font-light px-3 py-2 w-full shadow-xl rounded-lg capitalize"
+          className="text-md sm:text-lg md:text-xl font-light px-3 py-2 w-full shadow-xl rounded-lg capitalize"
         />
         <UilSearch
           size={25}

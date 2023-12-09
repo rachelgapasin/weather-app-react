@@ -1,7 +1,7 @@
 import "./App.css";
 import TopButtons from "./components/TopButtons";
 import Inputs from "./components/Inputs";
-import TimeAndLocation from "./components/TimeAndLocation";
+import Time from "./components/Time";
 import TemperatureAndDetails from "./components/TemperatureAndDetails";
 import Forecast from "./components/Forecast";
 
@@ -11,7 +11,7 @@ function App() {
       <TopButtons />
       <Inputs />
 
-      <TimeAndLocation />
+      <Time />
       <TemperatureAndDetails />
 
       <Forecast title="Hourly Forecast" />
