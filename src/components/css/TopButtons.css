@@ -1,5 +1,6 @@
-.TopButtons {
-  justify-content: space-around;
+.TopButtons .city-list {
+  gap: 20px;
+  margin: 0 auto;
 }
 
 .TopButtons button {
@@ -9,15 +10,28 @@
   padding: 5px 15px;
 }
 
+.TopButtons .active {
+  background-color: var(--primary-color);
+  color: #000;
+}
+
 @media (max-width: 639px) {
-  .TopButtons {
+  .TopButtons,
+  .TopButtons .city-list {
+    align-items: stretch;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
-  .TopButtons .btn-city {
-    align-items: stretch;
-    text-align: center !important;
+  .TopButtons .city-list {
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .TopButtons .city-list.flex {
+    max-height: 300px;
   }
 }

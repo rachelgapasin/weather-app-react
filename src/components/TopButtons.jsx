@@ -40,24 +40,22 @@ function TopButtons() {
     <div className="TopButtons sm:flex my-6">
       <button
         id="btn-cities"
-        className="sm:hidden justify-center"
+        className={`btn-cities ${
+          isVisible === "flex" ? "active" : ""
+        } sm:hidden justify-center`}
         onClick={showCities}
       >
         Default Cities
       </button>
-      {cities.map((city) => (
-        <button
-          key={city.id}
-          className={`btn-city ${isVisible} sm:flex transition ease-out hover:scale-110`}
-        >
-          {city.title}
-        </button>
-      ))}
+      <div className={`city-list ${isVisible} sm:flex`}>
+        {cities.map((city) => (
+          <button key={city.id} className="transition ease-out hover:scale-110">
+            {city.title}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
 
 export default TopButtons;
-
-// flex items-center justify-around
-//btn-city {isVisible} sm:flex transition ease-out hover:scale-110

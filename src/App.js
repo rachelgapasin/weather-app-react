@@ -7,7 +7,7 @@ import Forecast from "./components/Forecast";
 
 function App() {
   return (
-    <div className="App mx-auto max-w-screen-md ">
+    <div className="App mx-auto">
       <TopButtons />
       <Inputs />
 
