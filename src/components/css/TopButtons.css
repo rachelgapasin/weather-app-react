@@ -1,6 +1,23 @@
+.TopButtons {
+  justify-content: space-around;
+}
+
 .TopButtons button {
   background: var(--btn-bg);
   border: 1px solid;
   border-radius: 80px;
   padding: 5px 15px;
+}
+
+@media (max-width: 639px) {
+  .TopButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .TopButtons .btn-city {
+    align-items: stretch;
+    text-align: center !important;
+  }
 }
