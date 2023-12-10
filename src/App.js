@@ -10,7 +10,7 @@ import Forecast from "./components/Forecast";
 import getFormattedWeatherData from "./services/weatherService";
 
 function App() {
-  const [query, setQuery] = useState({ q: "berlin" });
+  const [query, setQuery] = useState({ q: "manila" });
   const [units, setUnits] = useState("imperial");
   const [weather, setWeather] = useState(null);
 
