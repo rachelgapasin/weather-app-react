@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./css/TopButtons.css";
 
-function TopButtons() {
+function TopButtons({ setQuery }) {
   const [isVisible, setIsVisible] = useState("hidden");
 
   function showCities() {
@@ -52,6 +52,7 @@ function TopButtons() {
           <button
             key={city.id}
             className="transition ease-out sm:hover:scale-110"
+            onClick={() => setQuery({ q: city.title })}
           >
             {city.title}
           </button>

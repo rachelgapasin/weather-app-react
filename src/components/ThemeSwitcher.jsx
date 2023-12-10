@@ -27,9 +27,9 @@ function ThemeSwitcher() {
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         >
           {theme === "dark" ? (
-            <i className="fa-regular fa-sun"></i>
+            <i className="fa-regular fa-sun" title="Light mode"></i>
           ) : (
-            <i className="fa-regular fa-moon"></i>
+            <i className="fa-regular fa-moon" title="Dark mode"></i>
           )}
         </button>
       </div>
